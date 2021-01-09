@@ -55,6 +55,17 @@ nav {
     height: auto;
 }
 
+.links {
+    text-decoration: none;
+    color: white;
+
+    font-size: 16px;
+}
+
+.links:hover {
+    color: lightsalmon;
+}
+
 h2 {
     color: silver;
     font-size: 44px;
@@ -101,6 +112,8 @@ footer {
     height: 50px;
     width: 100%;
     overflow: hidden;
+
+    height: 55px;
 
     display: flex;
     flex-direction: row;

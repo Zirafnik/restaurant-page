@@ -1,1 +1,3 @@
-console.log('learning webpack');
+import {homePage} from "./home"
+
+homePage();

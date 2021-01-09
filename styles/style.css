@@ -29,6 +29,8 @@ nav {
 }
 
 .list {
+    width: 500px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -38,16 +40,22 @@ nav {
     margin-right: 50px;
 }
 
+.nameDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .headline {
     font-size: 34px;
 
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .wrapper {
-    width: 7%;
+    width: 14%;
 
-    margin-right: 670px;
+    margin-left: 25px;
 }
 
 .logo {

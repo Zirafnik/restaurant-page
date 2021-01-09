@@ -3,20 +3,24 @@ export function homePage() {
     
     let nav= document.createElement('nav');
 
+    let nameDiv= document.createElement('div');
+    nameDiv.classList.add('nameDiv');
+
     let headline= document.createElement('h1');
     headline.innerHTML= 'Buffalo\'s Pot';
     headline.classList.add('headline');
-    nav.appendChild(headline);
+    nameDiv.appendChild(headline);
 
     //logo wrapper
     let wrapper= document.createElement('div');
     wrapper.classList.add('wrapper');
-
     let logo= document.createElement('img');
     logo.setAttribute('src', '/styles/images/bison-logo-inverted-cropped.png');
     logo.classList.add('logo');
     wrapper.appendChild(logo);
-    nav.appendChild(wrapper);
+    nameDiv.appendChild(wrapper);
+
+    nav.appendChild(nameDiv);
 
     let list= document.createElement('ul');
     list.classList.add('list');

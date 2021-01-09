@@ -1,0 +1,109 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+
+    background-image: url('./images/steak.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*tint*/
+    background-color: rgba(59, 59, 59, 0.747);
+    background-blend-mode: multiply;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item {
+    margin-right: 50px;
+}
+
+.headline {
+    font-size: 34px;
+
+    margin-left: 10px;
+}
+
+.wrapper {
+    width: 7%;
+
+    margin-right: 670px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: silver;
+    font-size: 44px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 170px;
+}
+
+button {
+    margin: 30px;
+
+    height: 50px;
+
+    font-size: x-large;
+    border-radius: 15px;
+
+    border: black 4px solid;
+}
+
+button:hover {
+    color: silver;
+    cursor: pointer;
+
+    border-color: silver;
+}
+
+#content {
+    height: 100%;
+}
+
+footer {
+    color: white;
+    background-color: black;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

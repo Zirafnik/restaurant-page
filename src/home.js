@@ -86,3 +86,8 @@ export function homePage() {
 
     document.body.appendChild(footer);
 }
+
+export function clearContent() {
+    let content= document.getElementById('content');
+    content.removeChild(document.querySelector('.container'));
+}

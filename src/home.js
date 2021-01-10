@@ -68,7 +68,7 @@ export function createHomePage() {
     content.appendChild(footer);
 
     //CONTAINER
-    createHomeContainer(content);
+    createHomeContainer();
 }
 
 export function clearContent() {

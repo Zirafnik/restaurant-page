@@ -55,7 +55,7 @@ export function homePage() {
     list.appendChild(contact);
     nav.appendChild(list);
 
-    document.body.insertBefore(nav, content);
+    content.appendChild(nav);
 
     let container= document.createElement('div');
     container.classList.add('container');
@@ -71,6 +71,7 @@ export function homePage() {
     content.appendChild(container);
 
     let footer= document.createElement('footer');
+    footer.style.position= 'absolute';
     let p= document.createElement('p');
     p.textContent= 'Zirafnik';
     p.classList.add('gitname');
@@ -88,7 +89,7 @@ export function homePage() {
 
     footer.appendChild(gitlink);
 
-    document.body.appendChild(footer);
+    content.appendChild(footer);
 }
 
 export function clearContent() {

@@ -56,13 +56,15 @@ export function createMenu() {
     burger.appendChild(burgerName);
     burger.appendChild(burgerPrice);
 
-   
+   //write function to these ?? --> think about how to make strings variable names. ; that even necessary??  dish1, dish2, dish3....
 
 
     menuDiv.appendChild(steak);
     menuDiv.appendChild(burger);
 
-    content.appendChild(menuDiv);
+    let footer= document.querySelector('footer');
+    footer.style.position= 'relative';
+    content.insertBefore(menuDiv, footer);
 
     //tbone
     //burger

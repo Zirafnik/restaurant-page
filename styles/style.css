@@ -39,6 +39,16 @@ nav {
 
 .item {
     margin-right: 50px;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+.item:hover {
+    color: lightsalmon;
+
+    cursor: pointer;
 }
 
 .nameDiv {
@@ -62,17 +72,6 @@ nav {
 .logo {
     width: 100%;
     height: auto;
-}
-
-.links {
-    text-decoration: none;
-    color: white;
-
-    font-size: 18px;
-}
-
-.links:hover {
-    color: lightsalmon;
 }
 
 h2 {

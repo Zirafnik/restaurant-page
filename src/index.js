@@ -22,11 +22,5 @@ menu.addEventListener('click', function() {
     createMenu(menuItems);
 })
 
-/*
-
-clearContent();
-
-createMenu(menuItems);
 
 //no reason for links in list --> remove?
-*/

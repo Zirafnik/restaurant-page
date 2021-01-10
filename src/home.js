@@ -27,27 +27,15 @@ export function createHomePage() {
 
     let home= document.createElement('li');
     home.classList.add('item');
-    let homelink= document.createElement('a');
-    homelink.setAttribute('href', '#');
-    homelink.innerHTML= 'Home';
-    homelink.classList.add('links');
-    home.appendChild(homelink);
+    home.textContent= 'Home';
 
     let menu= document.createElement('li');
     menu.classList.add('item');
-    let menulink= document.createElement('a');
-    menulink.setAttribute('href', '#');
-    menulink.innerHTML= 'Menu';
-    menulink.classList.add('links');
-    menu.appendChild(menulink);
+    menu.textContent= 'Menu';
 
     let contact= document.createElement('li');
     contact.classList.add('item');
-    let contactlink= document.createElement('a');
-    contactlink.setAttribute('href', '#');
-    contactlink.innerHTML= 'Contact';
-    contactlink.classList.add('links');
-    contact.appendChild(contactlink);
+    contact.textContent= 'Contact';
 
 
     list.appendChild(home);

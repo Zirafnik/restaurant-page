@@ -4,7 +4,7 @@ function createMenuEntry(string, price, div) {
     let dishWrapper= document.createElement('div');
     dishWrapper.classList.add('foodWrapper');
     let dishImg= document.createElement('img');
-    dishImg.setAttribute('src', '/styles/images/' + string + '.jpeg');
+    dishImg.setAttribute('src', 'dist/styles/images/' + string + '.jpeg');
     dishImg.classList.add('foodImg');
     dishWrapper.appendChild(dishImg);
 

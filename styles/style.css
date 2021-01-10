@@ -1,18 +1,19 @@
 html {
     height: 100%;
+
+    background: url('./images/steak-background.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-color: rgba(59, 59, 59, 0.747);
+    background-blend-mode: multiply;
 }
 
 body {
     height: 100%;
     width: 100%;
-
-    background-image: url('./images/steak.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    /*tint*/
-    background-color: rgba(59, 59, 59, 0.747);
-    background-blend-mode: multiply;
 }
 
 nav {

@@ -1,5 +1,3 @@
-//no reason for links in list --> remove?
-
 function createMenuEntry(string, price, div) {
     let dish= document.createElement('div');
     dish.classList.add('foodDiv');
@@ -25,73 +23,26 @@ function createMenuEntry(string, price, div) {
     div.appendChild(dish);
 }
 
-export function createMenu() {
+export function createMenu(foodObj) {
     let content= document.getElementById('content');
 
+    //MENU
     let menuDiv= document.createElement('div');
     menuDiv.classList.add('menuDiv');
 
-    //MENU
     let menuName= document.createElement('h2');
     menuName.textContent= 'MENU';
     menuName.classList.add('menuName');
     menuDiv.appendChild(menuName);
 
-    //STEAK
-    let steak= document.createElement('div');
-    steak.classList.add('foodDiv');
-    let steakWrapper= document.createElement('div');
-    steakWrapper.classList.add('foodWrapper');
-    let steakImg= document.createElement('img');
-    steakImg.setAttribute('src', '/styles/images/steak.jpeg');
-    steakImg.classList.add('foodImg');
-    steakWrapper.appendChild(steakImg);
 
-    let steakName= document.createElement('p');
-    steakName.textContent= 'Steak';
-    steakName.classList.add('foodName');
+    //DISHES
+    for(let key in foodObj) {
+        createMenuEntry(key, foodObj[key], menuDiv);
+    }
 
-    let steakPrice= document.createElement('p');
-    steakPrice.textContent= '$30';
-    steakPrice.classList.add('foodPrice');
-    
-    steak.appendChild(steakWrapper);
-    steak.appendChild(steakName);
-    steak.appendChild(steakPrice);
-
-    menuDiv.appendChild(steak);
-
-    //BURGER
-    let burger= document.createElement('div');
-    burger.classList.add('foodDiv');
-    let burgerWrapper= document.createElement('div');
-    burgerWrapper.classList.add('foodWrapper');
-    let burgerImg= document.createElement('img');
-    burgerImg.setAttribute('src', '/styles/images/burger.jpeg');
-    burgerImg.classList.add('foodImg');
-    burgerWrapper.appendChild(burgerImg);
-
-    let burgerName= document.createElement('p');
-    burgerName.textContent= 'Burger';
-    burgerName.classList.add('foodName');
-
-    let burgerPrice= document.createElement('p');
-    burgerPrice.textContent= '$5';
-    burgerPrice.classList.add('foodPrice');
-    
-    burger.appendChild(burgerWrapper);
-    burger.appendChild(burgerName);
-    burger.appendChild(burgerPrice);
-
-    menuDiv.appendChild(burger);
-
-    createMenuEntry('ribs', 25, menuDiv);
 
     let footer= document.querySelector('footer');
     footer.style.position= 'relative';
     content.insertBefore(menuDiv, footer);
-
-    //tbone
-    //burger
-    //ribs
 }

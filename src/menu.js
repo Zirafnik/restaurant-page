@@ -1,5 +1,30 @@
 //no reason for links in list --> remove?
 
+function createMenuEntry(string, price, div) {
+    let dish= document.createElement('div');
+    dish.classList.add('foodDiv');
+    let dishWrapper= document.createElement('div');
+    dishWrapper.classList.add('foodWrapper');
+    let dishImg= document.createElement('img');
+    dishImg.setAttribute('src', '/styles/images/' + string + '.jpeg');
+    dishImg.classList.add('foodImg');
+    dishWrapper.appendChild(dishImg);
+
+    let dishName= document.createElement('p');
+    dishName.textContent= string[0].toUpperCase() + string.substring(1);
+    dishName.classList.add('foodName');
+
+    let dishPrice= document.createElement('p');
+    dishPrice.textContent= '$' + price;
+    dishPrice.classList.add('foodPrice');
+    
+    dish.appendChild(dishWrapper);
+    dish.appendChild(dishName);
+    dish.appendChild(dishPrice);
+
+    div.appendChild(dish);
+}
+
 export function createMenu() {
     let content= document.getElementById('content');
 
@@ -18,7 +43,7 @@ export function createMenu() {
     let steakWrapper= document.createElement('div');
     steakWrapper.classList.add('foodWrapper');
     let steakImg= document.createElement('img');
-    steakImg.setAttribute('src', '/styles/images/steak2.jpeg');
+    steakImg.setAttribute('src', '/styles/images/steak.jpeg');
     steakImg.classList.add('foodImg');
     steakWrapper.appendChild(steakImg);
 
@@ -33,6 +58,8 @@ export function createMenu() {
     steak.appendChild(steakWrapper);
     steak.appendChild(steakName);
     steak.appendChild(steakPrice);
+
+    menuDiv.appendChild(steak);
 
     //BURGER
     let burger= document.createElement('div');
@@ -56,11 +83,9 @@ export function createMenu() {
     burger.appendChild(burgerName);
     burger.appendChild(burgerPrice);
 
-   //write function to these ?? --> think about how to make strings variable names. ; that even necessary??  dish1, dish2, dish3....
-
-
-    menuDiv.appendChild(steak);
     menuDiv.appendChild(burger);
+
+    createMenuEntry('ribs', 25, menuDiv);
 
     let footer= document.querySelector('footer');
     footer.style.position= 'relative';

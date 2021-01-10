@@ -1,4 +1,4 @@
-import {homePage, clearContent} from "./home"
+import {createHomePage, clearContent, createHomeContainer} from "./home"
 import {createMenu} from "./menu"
 
 let menuItems= {
@@ -8,10 +8,25 @@ let menuItems= {
     't-bone': 40
 }
 
-homePage();
+createHomePage();
+
+let home= document.querySelectorAll('li')[0];
+home.addEventListener('click', function() {
+    clearContent();
+    createHomeContainer();
+});
+
+let menu= document.querySelectorAll('li')[1];
+menu.addEventListener('click', function() {
+    clearContent();
+    createMenu(menuItems);
+})
+
+/*
 
 clearContent();
 
 createMenu(menuItems);
 
 //no reason for links in list --> remove?
+*/

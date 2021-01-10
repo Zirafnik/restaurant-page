@@ -1,4 +1,4 @@
-export function homePage() {
+export function createHomePage() {
     let content= document.getElementById('content');
     
     let nav= document.createElement('nav');
@@ -57,19 +57,7 @@ export function homePage() {
 
     content.appendChild(nav);
 
-    let container= document.createElement('div');
-    container.classList.add('container');
-
-    let text= document.createElement('h2');
-    text.textContent= 'Best buffalo steaks in the world!';
-    container.appendChild(text);
-
-    let orderBtn= document.createElement('button');
-    orderBtn.innerHTML= 'Make a reservation';
-    container.appendChild(orderBtn);
-
-    content.appendChild(container);
-
+    //FOOTER
     let footer= document.createElement('footer');
     footer.style.position= 'absolute';
     let p= document.createElement('p');
@@ -90,9 +78,33 @@ export function homePage() {
     footer.appendChild(gitlink);
 
     content.appendChild(footer);
+
+    //CONTAINER
+    createHomeContainer(content);
 }
 
 export function clearContent() {
     let content= document.getElementById('content');
-    content.removeChild(document.querySelector('.container'));
+
+    content.removeChild(content.children[1]);
+}
+
+export function createHomeContainer() {
+    let container= document.createElement('div');
+    container.classList.add('container');
+
+    let text= document.createElement('h2');
+    text.textContent= 'Best buffalo steaks in the world!';
+    container.appendChild(text);
+
+    let orderBtn= document.createElement('button');
+    orderBtn.innerHTML= 'Make a reservation';
+    container.appendChild(orderBtn);
+
+    let footer= document.querySelector('footer');
+
+    document.querySelector('#content').insertBefore(container, footer);
+
+    //footer position adjustment
+    footer.style.position= 'absolute';
 }

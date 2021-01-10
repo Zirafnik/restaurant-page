@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\n(0,_home__WEBPACK_IMPORTED_MODULE_0__.homePage)();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n(0,_home__WEBPACK_IMPORTED_MODULE_0__.homePage)();\n\n(0,_home__WEBPACK_IMPORTED_MODULE_0__.clearContent)();\n\n(0,_menu__WEBPACK_IMPORTED_MODULE_1__.createMenu)();\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenu\": () => /* binding */ createMenu\n/* harmony export */ });\n//no reason for links in list --> remove?\n\nfunction createMenu() {\n    let content= document.getElementById('content');\n\n    let menuDiv= document.createElement('div');\n    menuDiv.classList.add('menuDiv');\n\n    //MENU\n    let menuName= document.createElement('h2');\n    menuName.textContent= 'MENU';\n    menuName.classList.add('menuName');\n    menuDiv.appendChild(menuName);\n\n    //STEAK\n    let steak= document.createElement('div');\n    steak.classList.add('foodDiv');\n    let steakWrapper= document.createElement('div');\n    steakWrapper.classList.add('foodWrapper');\n    let steakImg= document.createElement('img');\n    steakImg.setAttribute('src', '/styles/images/steak2.jpeg');\n    steakImg.classList.add('foodImg');\n    steakWrapper.appendChild(steakImg);\n\n    let steakName= document.createElement('p');\n    steakName.textContent= 'Steak';\n    steakName.classList.add('foodName');\n\n    let steakPrice= document.createElement('p');\n    steakPrice.textContent= '$30';\n    steakPrice.classList.add('foodPrice');\n    \n    steak.appendChild(steakWrapper);\n    steak.appendChild(steakName);\n    steak.appendChild(steakPrice);\n\n    //BURGER\n    let burger= document.createElement('div');\n    burger.classList.add('foodDiv');\n    let burgerWrapper= document.createElement('div');\n    burgerWrapper.classList.add('foodWrapper');\n    let burgerImg= document.createElement('img');\n    burgerImg.setAttribute('src', '/styles/images/burger.jpeg');\n    burgerImg.classList.add('foodImg');\n    burgerWrapper.appendChild(burgerImg);\n\n    let burgerName= document.createElement('p');\n    burgerName.textContent= 'Burger';\n    burgerName.classList.add('foodName');\n\n    let burgerPrice= document.createElement('p');\n    burgerPrice.textContent= '$5';\n    burgerPrice.classList.add('foodPrice');\n    \n    burger.appendChild(burgerWrapper);\n    burger.appendChild(burgerName);\n    burger.appendChild(burgerPrice);\n\n   \n\n\n    menuDiv.appendChild(steak);\n    menuDiv.appendChild(burger);\n\n    content.appendChild(menuDiv);\n\n    //tbone\n    //burger\n    //ribs\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ })
 

@@ -67,7 +67,7 @@ nav {
     text-decoration: none;
     color: white;
 
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .links:hover {
@@ -88,14 +88,62 @@ h2 {
     margin-top: 170px;
 }
 
+.menuDiv {
+    width: 50%;
+
+    margin: 40px;
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.menuName {
+    text-align: center;
+
+    padding-bottom: 50px;
+}
+
+.foodDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 60px;
+}
+
+.foodWrapper {
+    width: 500px;
+}
+
+.foodImg {
+    width: 100%;
+    height: auto; 
+
+    border-radius: 10px;
+}
+
+.foodName {
+    color: silver;
+    font-size: 44px;
+}
+
+.foodPrice {
+    color: silver;
+    font-size: 36px;
+}
+
 button {
     margin: 30px;
 
     height: 50px;
 
     font-size: x-large;
-    border-radius: 15px;
+    color: black;
 
+    border-radius: 15px;
     border: black 4px solid;
 }
 
@@ -107,19 +155,20 @@ button:hover {
 }
 
 #content {
-    height: 100%;
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
     color: white;
     background-color: black;
 
-    position: absolute;
-    left: 0;
     bottom: 0;
-    height: 50px;
     width: 100%;
-    overflow: hidden;
 
     height: 55px;
 

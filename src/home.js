@@ -55,7 +55,7 @@ export function homePage() {
     list.appendChild(contact);
     nav.appendChild(list);
 
-    content.appendChild(nav);
+    document.body.insertBefore(nav, content);
 
     let container= document.createElement('div');
     container.classList.add('container');

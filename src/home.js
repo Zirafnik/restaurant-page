@@ -17,7 +17,7 @@ export function createHomePage() {
     let wrapper= document.createElement('div');
     wrapper.classList.add('wrapper');
     let logo= document.createElement('img');
-    logo.setAttribute('src', '/styles/images/bison-logo-inverted-cropped.png');
+    logo.setAttribute('src', 'styles/images/bison-logo-inverted-cropped.png');
     logo.classList.add('logo');
     wrapper.appendChild(logo);
     nameDiv.appendChild(wrapper);
@@ -60,7 +60,7 @@ export function createHomePage() {
     gitlink.setAttribute('target', '_blank');
 
     let gitimg= document.createElement('img');
-    gitimg.setAttribute('src', '/styles/images/github-inverted.png');
+    gitimg.setAttribute('src', 'styles/images/github-inverted.png');
     gitimg.classList.add('gitimg');
 
     gitlink.appendChild(gitimg);

@@ -1,3 +1,5 @@
+import {createContact} from "./contact"
+
 export function createHomePage() {
     let content= document.getElementById('content');
     
@@ -85,9 +87,14 @@ export function createHomeContainer() {
     text.textContent= 'Best buffalo steaks in the world!';
     container.appendChild(text);
 
-    let orderBtn= document.createElement('button');
-    orderBtn.innerHTML= 'Make a reservation';
-    container.appendChild(orderBtn);
+    let resBtn= document.createElement('button');
+    resBtn.innerHTML= 'Make a reservation';
+    resBtn.addEventListener('click', function() {
+        clearContent();
+        createContact();
+    })
+
+    container.appendChild(resBtn);
 
     let footer= document.querySelector('footer');
 

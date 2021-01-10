@@ -105,6 +105,34 @@ h2 {
     padding-bottom: 50px;
 }
 
+.contactDiv {
+    width: 30%;
+
+    margin: 40px;
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.contactName {
+    text-align: center;
+
+    font-size: 34px;
+
+    padding-bottom: 10px;
+}
+
+.info {
+    color: silver;
+    text-align: center;
+    font-size: 20px;
+    white-space: pre;
+
+    padding: 10px;
+}
+
 .foodDiv {
     display: flex;
     flex-direction: row;

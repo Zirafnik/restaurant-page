@@ -1,5 +1,6 @@
 import {createHomePage, clearContent, createHomeContainer} from "./home"
 import {createMenu} from "./menu"
+import {createContact} from "./contact"
 
 let menuItems= {
     'steak': 30,
@@ -22,5 +23,8 @@ menu.addEventListener('click', function() {
     createMenu(menuItems);
 })
 
-
-//no reason for links in list --> remove?
+let contact= document.querySelectorAll('li')[2];
+contact.addEventListener('click', function() {
+    clearContent();
+    createContact();
+})

@@ -180,6 +180,8 @@ button:hover {
     cursor: pointer;
 
     border-color: silver;
+
+    background-color: transparent;
 }
 
 #content {
